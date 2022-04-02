@@ -26,6 +26,8 @@
 .gray-tt {
     background-color: #30475E;
     border-radius: 0.58rem;
+    padding-top: 24px;
+    padding-bottom: 22px;
 }
 
 .dark-tt-bgr {
@@ -80,4 +82,8 @@
 .menu-icons i {
     color: #F5F5F5;
     font-size: 30px;
+}
+
+table p {
+    margin-top: 1rem;
 }
