@@ -41,7 +41,7 @@
                                 <div class="modal-body">
                                     <label for="nam-command">Tên command: </label>
                                     <div class="form-group">
-                                        <input type="text" id="name-command" name="name-command" placeholder="Mã môn" class="form-control">
+                                        <input type="text" id="name-command" name="name-command" class="form-control">
                                     </div>
                                     <label for="nam-command">Nội dung: </label>
                                     <div class="form-group">
@@ -49,7 +49,8 @@
                                     </div>
                                     <input type="button" id='btn-clipboard' class="btn btn-primary" value="Bắt đầu">
                                     </input>
-
+                                    <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
+                                    </input>
 
                                 </div>
                                 <div class="modal-footer">
@@ -170,17 +171,33 @@
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
         <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
-
+        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/command.js"></script>
         <script>
+            let str = "";
             $("#btn-clipboard").click(function() {
                 if ($("#btn-clipboard").val() == "Bắt đầu") {
                     $("#text-command").removeClass("d-none");
                     $("#btn-clipboard").val("Kết thúc");
-                } else {
+                    $("#btn-clipboard-reset").hide();
+                    hotkeys('*', function(event, handler) {
+                        str += event.key;
+                        $("#text-command").val(str);
 
+                    });
+                } else {
+                    //$("#text-command").val(str);
+                    $("#btn-clipboard").val("Bắt đầu");
+                    $("#btn-clipboard-reset").show();
+
+                    //console.log(str)
+                    str = "";
                 }
+            })
+            $("#btn-clipboard-reset").click(function() {
+                str = "";
+                $("#text-command").val(str);
 
             })
         </script>
