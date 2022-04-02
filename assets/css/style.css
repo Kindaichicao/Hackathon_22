@@ -52,3 +52,18 @@
     font-size: 17px;
     padding-top: 20px;
 }
+
+.menu-icons {
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: #000;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icons i {
+    color: #F5F5F5;
+    font-size: 30px;
+}
