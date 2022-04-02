@@ -24,8 +24,8 @@ function printCommand(pageNumber) {
     for (let i = start; i < arr.length && i< start+5 ; i++) {
         s +=
             '<tr  >' +
-            '    <td scope="row">' + Number(i+1) + '</td>' +
-            '    <td>' + arr[i].name + '</td>' +
+            '    <td scope="row" class="text-center"  >' + Number(i+1) + '</td>' +
+            '    <td class="text-center" >' + arr[i].name + '</td>' +
             '    <td><div  class="rounded " style= "background-color:#45CCAF"> <p class="text-center" style="color: black" >' + arr[i].hotkey + '</p></div></td>' +
             '</tr>';
     }
