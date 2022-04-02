@@ -57,7 +57,7 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button  id="add" class="btn btn-primary ml-1">
+                                    <button id="add" class="btn btn-primary ml-1">
                                         <i class="bx bx-check d-block d-sm-none"></i>
                                         <span class="d-none d-sm-block">Thêm</span>
                                     </button>
@@ -98,7 +98,7 @@
                         </a>
                         <div class="col-11">
                             <div class="row">
-                                <a href="setting.html" class="col-4 siderbar-tt">
+                                <a href="setting.html" class="col-4 siderbar-tt active">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -126,7 +126,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="command.html" class="col-4 siderbar-tt active">
+                                <a href="command.html" class="col-4 siderbar-tt ">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -175,80 +175,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/command.js"></script>
-    <!-- <script>
-        document.addEventListener("keydown", function (event) {
-            if (event.ctrlKey) {
-                event.preventDefault();
-            }
-        });
-        let hotKey;
-        let tmp="";
-        $("#btn-clipboard").click(function () {
-            if ($("#btn-clipboard").val() == "Bắt đầu") {
-                $("#text-command").removeClass("d-none");
-                $("#btn-clipboard").val("Kết thúc");
-                $("#btn-clipboard-reset").hide();
-                let str = "";
-                hotkeys('*', function (event, handler) {
-                    // console.log(event);
-                    if(event.ctrlKey == true){
-                        str+='"Ctrl" ';
-                    }
-                    if (event.shiftKey == true) {
-                        str += '"Shift" ';
-                    }
-                    if(event.ctrlKey==true || event.shiftKey==true ){
-                        if(event.key != "Control" && event.key != "Shift")
-                        {
-                            hotKey=event;
-                            tmp=event.key;
-                            str+='"' + event.key + '"';
-                        }
-                        else{
-                            str="";
-                            hotKey=null;
-                            tmp="";
-                        }
-                    }
-                    else{
-                        str="";
-                        hotKey = null;
-                        tmp = "";
-                    }
-                    $("#text-command").val(str);
-
-                });
-            } else {
-                //$("#text-command").val(str);
-                $("#btn-clipboard").val("Bắt đầu");
-                $("#btn-clipboard-reset").show();
-
-                //console.log(str)
-            }
-        });
-        $("#btn-clipboard-reset").click(function () {
-            $("#text-command").val(str);
-
-        });
-        $("#add").click(function () {
-            if(tmp == "") {
-                return ;
-            }
-            var arr=[];
-            if(hotKey.ctrlKey==true){
-                arr.push("Control");
-            }
-            if(hotKey.shiftKey==true){
-                arr.push("Shift");
-            }
-            arr.push(hotKey.key)
-            let command={"name":$("#name-command").val(),
-                         "hotkey": arr
-                        }
-            console.log(command);
-        })
-    </script> -->
+    <script src="assets/js/setting.js"></script>
 </body>
 
 </html>
