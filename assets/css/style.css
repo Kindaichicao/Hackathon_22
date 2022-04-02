@@ -14,6 +14,7 @@
 .red-tt:hover {
     background-color: rgb(60, 71, 239);
     box-shadow: 0px 0px 5px 2px rgb(60, 71, 239);
+    cursor: pointer;
 }
 
 .red-tt {
@@ -26,6 +27,7 @@
     background-color: #30475E;
     border-radius: 0.58rem;
 }
+
 .dark-tt-bgr {
     background-color: rgb(11, 19, 27);
 }
@@ -35,7 +37,6 @@
 }
 
 .active :hover {
-    transform: scale(1.1);
     background-color: rgb(60, 71, 239) !important;
     box-shadow: 0px 0px 5px 2px rgb(60, 71, 239) !important;
 }
