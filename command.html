@@ -27,8 +27,10 @@
 
 
                 <!-- Vertically Centered modal Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                        role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Command
@@ -37,24 +39,25 @@
                                     <i class="bi bi-x-circle" style="color: red;"></i>
                                 </button>
                             </div>
-                            <form name="add-command" action="/" method="POST">
+                            <form name="add-command" action="/" onSubmit="event.preventDefault(); " method="POST">
                                 <div class="modal-body">
                                     <label for="nam-command">Tên command: </label>
                                     <div class="form-group">
                                         <input type="text" id="name-command" name="name-command" class="form-control">
                                     </div>
-                                    <label for="nam-command">Nội dung: </label>
+                                    <label for="name-command">Nội dung: </label>
                                     <div class="form-group">
-                                        <input type="text" id="text-command" name="text-command" class="form-control d-none" disabled>
+                                        <input type="text" id="text-command" name="text-command"
+                                            class="form-control d-none" disabled>
                                     </div>
                                     <input type="button" id='btn-clipboard' class="btn btn-primary" value="Bắt đầu">
                                     </input>
-                                    <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
-                                    </input>
+                                    <!-- <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
+                                    </input> -->
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary ml-1">
+                                    <button  id="add" class="btn btn-primary ml-1">
                                         <i class="bx bx-check d-block d-sm-none"></i>
                                         <span class="d-none d-sm-block">Thêm</span>
                                     </button>
@@ -71,9 +74,23 @@
                     <div class="row">
                         <a href="index.html" class="col-1">
                             <div class="row">
-                                <div class="col-12 siderbar-tt">
+                                <div class="col-12 active siderbar-tt">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h6 class="text-home-tt">H</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h6 class="text-home-tt">O</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h6 class="text-home-tt">M</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h6 class="text-home-tt">E</h6>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -81,26 +98,26 @@
                         </a>
                         <div class="col-11">
                             <div class="row">
-                                <a href="actioncommand.html" class="col-3 siderbar-tt">
+                                <a href="setting.html" class="col-4 siderbar-tt">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
                                                 <div class="menu-icons col-4 offset-4">
-                                                    <i class="iconly-boldShow"></i>
+                                                    <i class="bi-gear"></i>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <h6 class="text-tt">Action Command</h6>
+                                                    <h6 class="text-tt">Setting</h6>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="action.html" class="col-3 siderbar-tt">
+                                <a href="action.html" class="col-4 siderbar-tt">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
                                                 <div class="menu-icons col-4 offset-4">
-                                                    <i class="iconly-boldShow"></i>
+                                                    <i class="bi-hand-index"></i>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <h6 class="text-tt">Action</h6>
@@ -109,29 +126,15 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="command.html" class="col-3 siderbar-tt active">
+                                <a href="command.html" class="col-4 siderbar-tt active">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
                                                 <div class="menu-icons col-4 offset-4">
-                                                    <i class="iconly-boldShow"></i>
+                                                    <i class="bi-command"></i>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <h6 class="text-tt">Command</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="setting.html" class="col-3 siderbar-tt">
-                                    <div class="card">
-                                        <div class="card-body red-tt px-3 py-4-5">
-                                            <div class="row">
-                                                <div class="menu-icons col-4 offset-4">
-                                                    <i class="iconly-boldShow"></i>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <h6 class="text-tt">Setting</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,12 +225,10 @@
 
                 <div class=" loat-start float-lg-end mb-3">
                     <!-- button trigger for  Vertically Centered modal -->
-                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalCenter">
                         <i class="bi bi-plus"></i>Thêm
                     </button>
-                    <button id='btn-modified' class="btn btn-primary">
-                        <i class="bi bi-card-checklist"></i> Sửa
-                            </button>
                 </div>
 
 
@@ -243,41 +244,88 @@
                     </div>
                 </div>
             </div>
-            </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-        <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/command.js"></script>
-        <script>
-            let str = "";
-            $("#btn-clipboard").click(function() {
-                if ($("#btn-clipboard").val() == "Bắt đầu") {
-                    $("#text-command").removeClass("d-none");
-                    $("#btn-clipboard").val("Kết thúc");
-                    $("#btn-clipboard-reset").hide();
-                    hotkeys('*', function(event, handler) {
-                        str += event.key;
-                        $("#text-command").val(str);
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/command.js"></script>
+    <!-- <script>
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+        });
+        let hotKey;
+        let tmp="";
+        $("#btn-clipboard").click(function () {
+            if ($("#btn-clipboard").val() == "Bắt đầu") {
+                $("#text-command").removeClass("d-none");
+                $("#btn-clipboard").val("Kết thúc");
+                $("#btn-clipboard-reset").hide();
+                let str = "";
+                hotkeys('*', function (event, handler) {
+                    // console.log(event);
+                    if(event.ctrlKey == true){
+                        str+='"Ctrl" ';
+                    }
+                    if (event.shiftKey == true) {
+                        str += '"Shift" ';
+                    }
+                    if(event.ctrlKey==true || event.shiftKey==true ){
+                        if(event.key != "Control" && event.key != "Shift")
+                        {
+                            hotKey=event;
+                            tmp=event.key;
+                            str+='"' + event.key + '"';
+                        }
+                        else{
+                            str="";
+                            hotKey=null;
+                            tmp="";
+                        }
+                    }
+                    else{
+                        str="";
+                        hotKey = null;
+                        tmp = "";
+                    }
+                    $("#text-command").val(str);
 
-                    });
-                } else {
-                    //$("#text-command").val(str);
-                    $("#btn-clipboard").val("Bắt đầu");
-                    $("#btn-clipboard-reset").show();
+                });
+            } else {
+                //$("#text-command").val(str);
+                $("#btn-clipboard").val("Bắt đầu");
+                $("#btn-clipboard-reset").show();
 
-                    //console.log(str)
-                    str = "";
-                }
-            })
-            $("#btn-clipboard-reset").click(function() {
-                str = "";
-                $("#text-command").val(str);
+                //console.log(str)
+            }
+        });
+        $("#btn-clipboard-reset").click(function () {
+            $("#text-command").val(str);
 
-            })
-        </script>
+        });
+        $("#add").click(function () {
+            if(tmp == "") {
+                return ;
+            }
+            var arr=[];
+            if(hotKey.ctrlKey==true){
+                arr.push("Control");
+            }
+            if(hotKey.shiftKey==true){
+                arr.push("Shift");
+            }
+            arr.push(hotKey.key)
+            let command={"name":$("#name-command").val(),
+                         "hotkey": arr
+                        }
+            console.log(command);
+        })
+    </script> -->
 </body>
 
 </html>

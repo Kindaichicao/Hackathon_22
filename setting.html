@@ -22,6 +22,52 @@
 
 <body>
     <div id="app" class="dark-tt-bgr">
+        <div class="card-content">
+            <div class="card-body">
+
+
+                <!-- Vertically Centered modal Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                        role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Command
+                                </h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class="bi bi-x-circle" style="color: red;"></i>
+                                </button>
+                            </div>
+                            <form name="add-command" action="/" onSubmit="event.preventDefault(); " method="POST">
+                                <div class="modal-body">
+                                    <label for="nam-command">Tên command: </label>
+                                    <div class="form-group">
+                                        <input type="text" id="name-command" name="name-command" class="form-control">
+                                    </div>
+                                    <label for="name-command">Nội dung: </label>
+                                    <div class="form-group">
+                                        <input type="text" id="text-command" name="text-command"
+                                            class="form-control d-none" disabled>
+                                    </div>
+                                    <input type="button" id='btn-clipboard' class="btn btn-primary" value="Bắt đầu">
+                                    </input>
+                                    <!-- <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
+                                    </input> -->
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="add" class="btn btn-primary ml-1">
+                                        <i class="bx bx-check d-block d-sm-none"></i>
+                                        <span class="d-none d-sm-block">Thêm</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="page-content row p-5">
             <section class="col-12">
                 <div class="col-12">
@@ -52,7 +98,7 @@
                         </a>
                         <div class="col-11">
                             <div class="row">
-                                <a href="setting.html" class="col-4 siderbar-tt">
+                                <a href="setting.html" class="col-4 siderbar-tt active">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -80,7 +126,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="command.html" class="col-4 siderbar-tt">
+                                <a href="command.html" class="col-4 siderbar-tt ">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -94,39 +140,42 @@
                                         </div>
                                     </div>
                                 </a>
-
                             </div>
                         </div>
                     </div>
             </section>
-            <div class="col-12" style="height: 800px;">
-                <div class="row m-3">
-                    <div class="col-2 offset-1">
-                        <img src="assets/images/logo/New Project.png" width="200px" height="200px">
-                    </div>
-                    <div class="col-7" style="float: right; margin-left: 70px; font-size: 1.1rem; text-align: justify;">
-                        Hand X là phần mềm nhận diện thao tác tay và gắn các thao tác vào các phím tắt giúp người dùng có thể sử dụng các phím tắt ấy một cách nhanh chóng và thuận tiện hơn. Được ứng dụng cơ sở trí tuệ tiên tiến, Hand X có khả năng nhận diện thao tác tay của
-                        người sự dụng nhanh chóng với độ chính xác cực cao, mang lại trải nghiệm tốt nhất cho người dùng, hạn chế sự khó chịu đến từ hiện tượng chậm trễ cũng như nhận điện sai hay không nhận diện thao tác.
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-10 offset-1" style="float: right; margin-left: 70px; font-size: 1.1rem; text-align: justify;">
-                        Không chỉ dừng lại ở đó, Hand X còn có khả năng tùy chọn cá nhân hóa cho các hotkey, giúp người dùng tự do điều chỉnh và gán các hotkey theo ý muốn, tạo nên sự tiện lợi nhất cho người dùng. Với phương châm đơn giản và thuận tiện, team ThanhCute nhắm đến
-                        một phần mềm đơn giản nhưng đầy đủ tính năng và tạo được sự tiện dụng nhất cho người dùng. Vì thế nên phần mềm Hand X dù đơn giản nhưng vẫn đảm bảo đáp ứng được đủ các tiêu chí cơ bản và năng cao phù hợp với nhu cầu của đông đảo
-                        người sử dụng
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-10 offset-1" style="float: right; margin-left: 70px; font-size: 1.1rem; text-align: justify;">
-                        Mọi ý kiến góp ý cũng như phản hồi về phần mềm, vui lòng liên hệ: <br> - Trần Thị Thu Thanh <br> - Lưu Thành Đạt <br> - Nguyễn Thành Trung <br> - Nguyễn Phú Hồng Loan <br>
-                    </div>
+            <div class="col-4 offset-6 ">
+
+                <div class=" loat-start float-lg-end mb-3">
+                    <!-- button trigger for  Vertically Centered modal -->
+                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#exampleModalCenter">
+                        <i class="bi bi-plus"></i>Thêm
+                    </button>
                 </div>
 
+
             </div>
+            <div class="col-8 offset-2 gray-tt">
+                <div class="row">
+                    <div class="col-8 offset-2" id="content">
+                        <!-- INNER TABLE -->
+
+                    </div>
+                    <div class="d-flex justify-content-center col-6 offset-3" id="PageNum">
+
+                    </div>
+                </div>
             </div>
         </div>
-
-
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/setting.js"></script>
 </body>
 
 </html>
