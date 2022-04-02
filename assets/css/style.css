@@ -1,0 +1,54 @@
+.siderbar-tt {
+    padding-right: calc(var(--bs-gutter-x)/2) !important;
+    padding-left: calc(var(--bs-gutter-x)/2) !important;
+}
+
+.siderbar-tt:hover {
+    transform: scale(1.1);
+}
+
+.white-tt {
+    background-color: #F5F5F5;
+}
+
+.red-tt:hover {
+    background-color: rgb(60, 71, 239);
+    box-shadow: 0px 0px 5px 2px rgb(60, 71, 239);
+}
+
+.red-tt {
+    background-color: #30475E;
+    border-radius: 0.58rem;
+    height: 150px;
+}
+
+.dark-tt-bgr {
+    background-color: rgb(11, 19, 27);
+}
+
+.blue-tt {
+    background-color: #30475E;
+}
+
+.active :hover {
+    transform: scale(1.1);
+    background-color: rgb(60, 71, 239) !important;
+    box-shadow: 0px 0px 5px 2px rgb(60, 71, 239) !important;
+}
+
+.active .red-tt {
+    background-color: rgb(96, 41, 212);
+    box-shadow: 0px 0px 5px 2px rgb(96, 41, 212);
+}
+
+.shadow-active {
+    box-shadow: 5px 2px 2px #888888;
+}
+
+.text-tt {
+    color: #fafbff!important;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+    padding-top: 20px;
+}
