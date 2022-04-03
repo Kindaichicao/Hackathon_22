@@ -1,4 +1,4 @@
-const arr =
+const arrSetting =
     [
         { "action": { "id": 1, "name": "action1" }, "command": { "id": 1, "name": "command1" } },
         {"action":{"id":2,"name": "action2"}, "command":{"id":2,"name": "command10"} },
@@ -12,6 +12,29 @@ const arr =
         {"action":{"id":10,"name": "action10"}, "command":{"id":10,"name": "command9"} },
         {"action":{"id":11,"name": "action11"}, "command":{"id":11,"name": "command11"} },
         { "action": { "id": 12, "name": "action12" }, "command": { "id": 12, "name": "command12" } },
+    ];
+
+const arrAction =
+    [
+        { "name": "Cut" },
+        { "name": "Copy" },
+        { "name": "All" },
+        { "name": "Search" },
+        { "name": "New" },
+        { "name": "Print" },
+        { "name": "Save" },
+        { "name": "Switch Window" }
+    ];
+const arrCommand =
+    [
+        { "name": "Cut", "hotkey": "Ctrl+x" },
+        { "name": "Copy", "hotkey": "Ctrl+v" },
+        { "name": "All", "hotkey": "Ctrl+a" },
+        { "name": "Search", "hotkey": "Ctrl+f" },
+        { "name": "New", "hotkey": "Ctrl+n" },
+        { "name": "Print", "hotkey": "Ctrl+p" },
+        { "name": "Save", "hotkey": "Ctrl+s" },
+        { "name": "Switch Window", "hotkey": "Alt + Tab" }
     ];
 function printSetting(pageNumber) {
     let s =
@@ -47,6 +70,7 @@ function printSetting(pageNumber) {
         s2 += '<input type="button" class=" m-2" value="' + i + '" onclick="printSetting(' + i + ')">';
     }
     document.getElementById('PageNum').innerHTML = s2;
+    
 };
 
 window.onload = function () {

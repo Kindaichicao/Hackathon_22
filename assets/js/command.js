@@ -57,7 +57,7 @@ $("#btn-clipboard").click(function () {
         hotkeys('*', function (event, handler) {
             // console.log(event);
             if (event.ctrlKey == true) {
-                str += '"Ctrl" ';
+                str = '"Ctrl" ';
             }
             if (event.shiftKey == true) {
                 str += '"Shift" ';
@@ -67,6 +67,7 @@ $("#btn-clipboard").click(function () {
                     hotKey = event;
                     tmp = event.key;
                     str += '"' + event.key + '"';
+                    $("#text-command").val(str);
                 }
                 else {
                     str = "";
@@ -79,7 +80,6 @@ $("#btn-clipboard").click(function () {
                 hotKey = null;
                 tmp = "";
             }
-            $("#text-command").val(str);
 
         });
     } else {
@@ -90,10 +90,7 @@ $("#btn-clipboard").click(function () {
         //console.log(str)
     }
 });
-$("#btn-clipboard-reset").click(function () {
-    $("#text-command").val(str);
 
-});
 $("#add").click(function () {
     if (tmp == "") {
         return;
