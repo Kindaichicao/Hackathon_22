@@ -1,14 +1,14 @@
-const arr =
-    [
-        { "name": "Cut", "hotkey": "Ctrl+x" },
-        { "name": "Copy", "hotkey": "Ctrl+v" },
-        { "name": "All", "hotkey": "Ctrl+a" },
-        { "name": "Search", "hotkey": "Ctrl+f" },
-        { "name": "New", "hotkey": "Ctrl+n" },
-        { "name": "Print", "hotkey": "Ctrl+p" },
-        { "name": "Save", "hotkey": "Ctrl+s" },
-        { "name": "Switch Window", "hotkey": "Alt + Tab" }
-    ];
+const arr = [
+    { "name": "Cut", "hotkey": "Ctrl+x" },
+    { "name": "Copy", "hotkey": "Ctrl+v" },
+    { "name": "All", "hotkey": "Ctrl+a" },
+    { "name": "Search", "hotkey": "Ctrl+f" },
+    { "name": "New", "hotkey": "Ctrl+n" },
+    { "name": "Print", "hotkey": "Ctrl+p" },
+    { "name": "Save", "hotkey": "Ctrl+s" },
+    { "name": "Switch Window", "hotkey": "Alt + Tab" }
+];
+
 function printCommand(pageNumber) {
     let s =
         '<table class="table table-dark table-striped ">' +
@@ -17,6 +17,7 @@ function printCommand(pageNumber) {
         '            <th scope="col"><p class="text-center"> ID </p></th>' +
         '            <th scope="col"><p class="text-center"> Name </p></th>' +
         '            <th scope="col"><p class="text-center"> Hotkey </p> </th>' +
+        '            <th scope="col"><p class="text-center">  </p> </th>' +
         '        </tr>' +
         '    </thead>' +
         '    <tbody> ';
@@ -26,8 +27,15 @@ function printCommand(pageNumber) {
             '<tr  >' +
             '    <td scope="row" class="text-center"  >' + Number(i + 1) + '</td>' +
             '    <td class="text-center" >' + arr[i].name + '</td>' +
-            '    <td><div  class="rounded " style= "background-color:#45CCAF"> <p class="text-center" style="color: black" >' + arr[i].hotkey + '</p></div></td>' +
-            '</tr>';
+            '    <td><div  class="rounded " style= "background-color:#45CCAF"> <p class="text-center" style="color: black" >' + arr[i].hotkey + '</p></div></td>';
+        if (false) {
+            s += '<td>\
+                <button onclick="deleteRow(' + arr[i].name + ')" type="button" class="btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">\
+                <i class="bi bi-trash-fill"></i>\
+            </button></td>'
+        }
+
+        s += '</tr>';
     }
     s +=
         '</tbody >' +
@@ -41,20 +49,20 @@ function printCommand(pageNumber) {
     }
     document.getElementById('PageNum').innerHTML = s2;
 };
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
     if (event.ctrlKey) {
         event.preventDefault();
     }
 });
 let hotKey;
 let tmp = "";
-$("#btn-clipboard").click(function () {
+$("#btn-clipboard").click(function() {
     if ($("#btn-clipboard").val() == "Bắt đầu") {
         $("#text-command").removeClass("d-none");
         $("#btn-clipboard").val("Kết thúc");
         $("#btn-clipboard-reset").hide();
         let str = "";
-        hotkeys('*', function (event, handler) {
+        hotkeys('*', function(event, handler) {
             // console.log(event);
             if (event.ctrlKey == true) {
                 str = '"Ctrl" ';
@@ -68,14 +76,12 @@ $("#btn-clipboard").click(function () {
                     tmp = event.key;
                     str += '"' + event.key + '"';
                     $("#text-command").val(str);
-                }
-                else {
+                } else {
                     str = "";
                     hotKey = null;
                     tmp = "";
                 }
-            }
-            else {
+            } else {
                 str = "";
                 hotKey = null;
                 tmp = "";
@@ -91,7 +97,7 @@ $("#btn-clipboard").click(function () {
     }
 });
 
-$("#add").click(function () {
+$("#add").click(function() {
     if (tmp == "") {
         return;
     }
@@ -108,8 +114,8 @@ $("#add").click(function () {
         "hotKey": arr
     }
     console.log(command);
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i].hotKey==command.hotKey || arr[i].name==command.name) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].hotKey == command.hotKey || arr[i].name == command.name) {
             alert("Hotkey đã tồn tại");
             return;
         }
@@ -118,7 +124,7 @@ $("#add").click(function () {
 
 })
 
-window.onload = function () {
+window.onload = function() {
 
     printCommand(1);
 };

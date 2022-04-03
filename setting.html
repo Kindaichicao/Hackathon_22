@@ -103,8 +103,7 @@
 
                 <div class=" loat-start float-lg-end mb-3">
                     <!-- button trigger for  Vertically Centered modal -->
-                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#exampleModalCenter">
+                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                         <i class="bi bi-plus"></i>Thêm
                     </button>
                 </div>
@@ -116,13 +115,11 @@
 
 
                     <!-- Vertically Centered modal Modal -->
-                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
-                            role="document">
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Setting
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Command
                                     </h5>
                                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <i class="bi bi-x-circle" style="color: red;"></i>
@@ -130,29 +127,12 @@
                                 </div>
                                 <form name="add-command" action="/" onSubmit="event.preventDefault(); " method="POST">
                                     <div class="modal-body">
-                                        <label for="nam-command">Tên command: </label>
-                                        <div class="form-group">
-                                            <select id="name-command" name="name-command" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                            </select>
-
-                                        </div>
-                                        <label for="name-command">Tên action </label>
-                                        <div class="form-group">
-                                            <select id="name-action" name="name-action" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                                <option value="">1</option>
-                                            </select>
-                                        </div>
-                                        <!-- <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
-                                        </input> -->
+                                        <label for="cars-mon">Chọn Action: </label>
+                                        <select class="form-group" name="mamon" id="cars-action" style="margin-right: 15px;">
+                                        </select><br>
+                                        <label for="cars-mon">Chọn Command: </label>
+                                        <select class="form-group" name="mamon" id="cars-command" style="margin-right: 15px;">
+                                        </select><br>
 
                                     </div>
                                     <div class="modal-footer">
@@ -178,15 +158,16 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/setting.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/setting.js"></script>
+        <script>
+        </script>
 </body>
 
 </html>
