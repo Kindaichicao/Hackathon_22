@@ -22,52 +22,7 @@
 
 <body>
     <div id="app" class="dark-tt-bgr">
-        <div class="card-content">
-            <div class="card-body">
 
-
-                <!-- Vertically Centered modal Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
-                        role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Command
-                                </h5>
-                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                    <i class="bi bi-x-circle" style="color: red;"></i>
-                                </button>
-                            </div>
-                            <form name="add-command" action="/" onSubmit="event.preventDefault(); " method="POST">
-                                <div class="modal-body">
-                                    <label for="nam-command">Tên command: </label>
-                                    <div class="form-group">
-                                        <input type="text" id="name-command" name="name-command" class="form-control">
-                                    </div>
-                                    <label for="name-command">Nội dung: </label>
-                                    <div class="form-group">
-                                        <input type="text" id="text-command" name="text-command"
-                                            class="form-control d-none" disabled>
-                                    </div>
-                                    <input type="button" id='btn-clipboard' class="btn btn-primary" value="Bắt đầu">
-                                    </input>
-                                    <!-- <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
-                                    </input> -->
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button  id="add" class="btn btn-primary ml-1">
-                                        <i class="bx bx-check d-block d-sm-none"></i>
-                                        <span class="d-none d-sm-block">Thêm</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="page-content row p-5">
             <!--  <section class="col-12">
                 <div class="col-12">
@@ -149,7 +104,7 @@
                     <div class="row">
                         <a href="index.html" class="col-1">
                             <div class="row">
-                                <div class="col-12 active siderbar-tt">
+                                <div class="col-12 siderbar-tt">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -202,7 +157,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="command.html" class="col-4 siderbar-tt">
+                                <a href="command.html" class="col-4 siderbar-tt active">
                                     <div class="card">
                                         <div class="card-body red-tt px-3 py-4-5">
                                             <div class="row">
@@ -225,13 +180,55 @@
 
                 <div class=" loat-start float-lg-end mb-3">
                     <!-- button trigger for  Vertically Centered modal -->
-                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#exampleModalCenter">
+                    <button id="btn-add" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                         <i class="bi bi-plus"></i>Thêm
                     </button>
                 </div>
 
 
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+
+
+                    <!-- Vertically Centered modal Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Thêm Command
+                                    </h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="bi bi-x-circle" style="color: red;"></i>
+                                    </button>
+                                </div>
+                                <form name="add-command" action="/" onSubmit="event.preventDefault(); " method="POST">
+                                    <div class="modal-body">
+                                        <label for="nam-command">Tên command: </label>
+                                        <div class="form-group">
+                                            <input type="text" id="name-command" name="name-command" class="form-control">
+                                        </div>
+                                        <label for="name-command">Nội dung: </label>
+                                        <div class="form-group">
+                                            <input type="text" id="text-command" name="text-command" class="form-control d-none" disabled>
+                                        </div>
+                                        <input type="button" id='btn-clipboard' class="btn btn-primary" value="Bắt đầu">
+                                        </input>
+                                        <!-- <input type="button" id='btn-clipboard-reset' class="btn btn-primary" value="Reset">
+                                        </input> -->
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="add" class="btn btn-primary ml-1">
+                                            <i class="bx bx-check d-block d-sm-none"></i>
+                                            <span class="d-none d-sm-block">Thêm</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-8 offset-2 gray-tt">
                 <div class="row">
@@ -244,16 +241,15 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/command.js"></script>
-    <!-- <script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/command.js"></script>
+        <!-- <script>
         document.addEventListener("keydown", function (event) {
             if (event.ctrlKey) {
                 event.preventDefault();
