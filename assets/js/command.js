@@ -28,9 +28,9 @@ function printCommand(pageNumber) {
             '    <td scope="row" class="text-center"  >' + Number(i + 1) + '</td>' +
             '    <td class="text-center" >' + arr[i].name + '</td>' +
             '    <td><div  class="rounded " style= "background-color:#45CCAF"> <p class="text-center" style="color: black" >' + arr[i].hotkey + '</p></div></td>';
-        if (false) {
+        if (true) {
             s += '<td>\
-                <button onclick="deleteRow(' + arr[i].name + ')" type="button" class="btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">\
+                <button onclick="deleteRow(' + i + ')" type="button" class=" btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">\
                 <i class="bi bi-trash-fill"></i>\
             </button></td>'
         }
@@ -49,6 +49,12 @@ function printCommand(pageNumber) {
     }
     document.getElementById('PageNum').innerHTML = s2;
 };
+
+function deleteRow(index) {
+    arr.splice(index, 1);
+    printCommand(1);
+    // console.log(`1`);
+}
 document.addEventListener("keydown", function(event) {
     if (event.ctrlKey) {
         event.preventDefault();

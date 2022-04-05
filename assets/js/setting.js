@@ -36,7 +36,7 @@ function printSetting(pageNumber) {
             '<td><button onclick="repairRow(' + arr[i].action.name + ',' + arr[i].command.name + ')" type="button" class="btn btn-sm btn-outline-success" style="padding-top: 7px; padding-bottom: 0px;">\
             <i class="bi bi-tools"></i>\
             </button>\
-            <button onclick="deleteRow(' + arr[i].action.name + ',' + arr[i].command.name + ')" type="button" class="btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">\
+            <button onclick="deleteRow(' + i + ')" type="button" class="btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">\
             <i class="bi bi-trash-fill"></i>\
         </button></td>'
         '</tr>';
@@ -53,6 +53,12 @@ function printSetting(pageNumber) {
     }
     document.getElementById('PageNum').innerHTML = s2;
 };
+
+function deleteRow(index) {
+    arr.splice(index, 1);
+    printSetting(1);
+    // console.log(`1`);
+}
 
 window.onload = function() {
     printSetting(1);
